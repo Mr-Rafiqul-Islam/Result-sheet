@@ -23,39 +23,43 @@ function resultKhujo() {
         if (x >= 33 && y >= 33 && z >= 33 && w >= 33) {
             var congo = "Congratulations, You Are Passed.! 😊";
             document.getElementById('re').innerHTML = congo;
+
+            var Ban = Grade(x)
+            var Eng = Grade(y)
+            var MAT = Grade(z)
+            var SCI = Grade(w)
+            var GPA = calcGpa(Ban, Eng, MAT, SCI);
+
+            document.getElementById('gp').innerHTML = GPA;
+
+            if (GPA == 5) {
+                document.getElementById('gr').innerHTML = 'A+';
+            }
+            else if (GPA < 5 && GPA >= 4) {
+                document.getElementById('gr').innerHTML = 'A';
+            }
+            else if (GPA < 4 && GPA >= 3.5) {
+                document.getElementById('gr').innerHTML = 'A-';
+            }
+            else if (GPA < 3.5 && GPA >= 3) {
+                document.getElementById('gr').innerHTML = 'B';
+            }
+            else if (GPA < 3 && GPA >= 2.5) {
+                document.getElementById('gr').innerHTML = 'C';
+            }
+            else if (GPA < 2.5 && GPA >= 2) {
+                document.getElementById('gr').innerHTML = 'D';
+            }
+            else {
+                document.getElementById('gr').innerHTML = 'F';
+            }
         } else {
             var fail = "Bad luck, You Are Failed.! 😓";
             document.getElementById('re').innerHTML = fail;
-        }
-        var Ban = Grade(x)
-        var Eng = Grade(y)
-        var MAT = Grade(z)
-        var SCI = Grade(w)
-        var GPA = calcGpa(Ban, Eng, MAT, SCI);
-
-        document.getElementById('gp').innerHTML = GPA;
-
-        if (GPA == 5) {
-            document.getElementById('gr').innerHTML = 'A+';
-        }
-        else if (GPA < 5 && GPA >= 4) {
-            document.getElementById('gr').innerHTML = 'A';
-        }
-        else if (GPA < 4 && GPA >= 3.5) {
-            document.getElementById('gr').innerHTML = 'A-';
-        }
-        else if (GPA < 3.5 && GPA >= 3) {
-            document.getElementById('gr').innerHTML = 'B';
-        }
-        else if (GPA < 3 && GPA >= 2.5) {
-            document.getElementById('gr').innerHTML = 'C';
-        }
-        else if (GPA < 2.5 && GPA >= 2) {
-            document.getElementById('gr').innerHTML = 'D';
-        }
-        else {
+            document.getElementById('gp').innerHTML = '0';
             document.getElementById('gr').innerHTML = 'F';
         }
+
     };
 
 
