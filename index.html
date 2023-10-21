@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Sheet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container" style="text-align: center;">
+        <h1>Get Your Result</h1>
+
+        <div class="row">
+            <div class="col-50">
+                <div class="uppr">
+                    <label for="Bangla">Bangla</label>
+                    <input type="number" name="bangla" id="Bangla">
+                    <label for="English">English</label>
+                    <input type="number" name="english" id="English">
+                
+                    <label for="Math">Math</label>
+                    <input type="number" name="math" id="Math">
+                    <label for="Science">Science</label>
+                    <input type="number" name="science" id="Science">
+                </div>
+                <div class="" style="text-align: center; margin-top: 50px;">
+                    <button onclick="resultKhujo()">Results</button>
+                </div>
+            </div>
+            
+            <div class="col-50 results">
+                <div>
+                    <h2>TOTAL MARKS</h2>
+                    <P id="tm">400</P>
+                </div>
+                <div>
+                    <h2>OBTAIN MARKS</h2>
+                    <P id="om"></P>
+                </div>
+                <div>
+                    <h2>PERCENTAGE</h2>
+                    <P id="per"></P>
+                </div>
+                <div>
+                    <h2>REMARKS</h2>
+                    <P id="re"></P>
+                </div>
+                <div>
+                    <h2>GPA</h2>
+                    <P id="gp"></P>
+                </div>
+                <div>
+                    <h2>GRADE</h2>
+                    <P id="gr"></P>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

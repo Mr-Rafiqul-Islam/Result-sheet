@@ -1,0 +1,25 @@
+
+body{
+    background-color:  aqua;
+}.col-50 button{
+    padding: 10px 20px;
+     background-color: aliceblue; 
+     border: 1px solid yellowgreen; 
+     border-radius: 15px;
+     text-transform: uppercase;
+     font: bold;
+}
+.col-50 button:hover{
+    transition: all 0.5s;
+     background-color: rgb(157, 246, 2); 
+     padding: 10px 30px;
+}
+.results div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col-50 p{
+    font-size: 30px;
+    margin-left: 30px;
+}
