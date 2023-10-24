@@ -57,7 +57,61 @@ function resultKhujo() {
             var fail = "Bad luck, You Are Failed.! 😓";
             document.getElementById('re').innerHTML = fail;
             document.getElementById('gp').innerHTML = '0';
-            document.getElementById('gr').innerHTML = 'F';
+            if (x < 33) {
+                if (y < 33) {
+                    if (z < 33) {
+                        if (w < 33) {
+                            document.getElementById('gr').innerHTML = 'F4';
+                        } else {
+                            document.getElementById('gr').innerHTML = 'F3';
+                        }
+                    }
+                    else if(w < 33){
+                        document.getElementById('gr').innerHTML = 'F3';
+                    } 
+                    else {
+                        document.getElementById('gr').innerHTML = 'F2';
+                    }
+                } 
+                else if(z < 33){
+                    if (w < 33) {
+                        document.getElementById('gr').innerHTML = 'F3';
+                    } else {
+                        document.getElementById('gr').innerHTML = 'F2';
+                    }
+                }
+                else if (w < 33) {
+                    document.getElementById('gr').innerHTML = 'F2';
+                }
+                else {
+                    document.getElementById('gr').innerHTML = 'F1';
+                }
+            }
+            else if (y < 33) {
+                if (z < 33) {
+                    if (w < 33) {
+                        document.getElementById('gr').innerHTML = 'F3';
+                    } else {
+                        document.getElementById('gr').innerHTML = 'F2';
+                    }
+                }
+                else if(w < 33){
+                    document.getElementById('gr').innerHTML = 'F2';
+                }
+                else {
+                    document.getElementById('gr').innerHTML = 'F1';
+                }
+            }
+            else if(z<33){
+                if (w < 33) {
+                    document.getElementById('gr').innerHTML = 'F2';
+                } else {
+                    document.getElementById('gr').innerHTML = 'F1';
+                }
+            }
+            else if(w<33){
+                document.getElementById('gr').innerHTML = 'F1';
+            }
         }
 
     };
